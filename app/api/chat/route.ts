@@ -3,8 +3,9 @@ import { RaxAI } from 'rax-ai'
 import { findRelevantContext } from '@/lib/chatbot-kb'
 
 // Initialize the Rax AI client
+const API_KEY = process.env.RAX_API_KEY || 'rax_553622c6d172d9a441e172ac6700c2d0639e13a00d73a77029dd96fb386136dd'
 const rax = new RaxAI({
-  apiKey: process.env.RAX_API_KEY || 'dummy-key-for-compilation-dev'
+  apiKey: API_KEY
 })
 
 export async function POST(request: Request) {
@@ -33,7 +34,7 @@ ${dynamicContext}`
     const promptMessages = [systemPrompt, ...messages]
     
     // Fallback Mock Mode if API Key is not set up in environment variables
-    if (!process.env.RAX_API_KEY || process.env.RAX_API_KEY === 'dummy-key-for-compilation-dev') {
+    if (!API_KEY || API_KEY === 'dummy-key-for-compilation-dev') {
       const userMessage = lastUserMessage.toLowerCase()
       let mockReply = "I apologize, but I am only authorized to answer questions about Ohio Business & Technology Consultants and our technical consulting services."
       

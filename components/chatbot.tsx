@@ -15,7 +15,6 @@ interface Message {
 
 const QUICK_REPLIES = [
   { text: '💼 Our Services', id: 'services' },
-  { text: '⚡ Rax AI Platform', id: 'rax' },
   { text: '🚀 Start a Project', id: 'project' },
   { text: '📞 Speak to a Consultant', id: 'consultant' },
 ]
@@ -26,7 +25,7 @@ export function Chatbot() {
     {
       id: 'welcome',
       sender: 'ai',
-      text: "Hello! 👋 Welcome to Ohio Business & Technology Consultants. I am your virtual assistant, powered by Rax AI's ultra-low latency engine (<50ms). How can I help you transform your business today?",
+      text: "Hello! 👋 Welcome to Ohio Business & Technology Consultants. I am your virtual assistant. How can I help you transform your business today?",
       timestamp: new Date(),
       latency: '22ms',
     },
@@ -159,7 +158,7 @@ export function Chatbot() {
               </button>
             </div>
             <p className="text-xs text-foreground font-medium leading-relaxed mt-1">
-              Need help? Ask me about our services or Rax AI integrations! Typically responds in under 50ms.
+              Need help? Ask me about our services or how to start a project! Typically responds in under 50ms.
             </p>
             <button
               onClick={handleOpenChat}
@@ -199,7 +198,7 @@ export function Chatbot() {
                   </h3>
                   <span className="text-[10px] text-indigo-100 font-medium tracking-wide flex items-center gap-1 mt-1">
                     <span className="inline-block w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-                    Powered by Rax AI (sub-50ms API)
+                    Powered by AI Assistant (sub-50ms API)
                   </span>
                 </div>
               </div>
@@ -311,7 +310,7 @@ export function Chatbot() {
             
             {/* Footer Tag */}
             <div className="bg-muted/30 border-t border-border/20 px-4 py-1.5 text-center text-[9.5px] text-muted-foreground/75 font-medium select-none">
-              Typically responds instantly (sub-50ms using Rax AI engine)
+              Typically responds instantly (sub-50ms)
             </div>
           </motion.div>
         )}
