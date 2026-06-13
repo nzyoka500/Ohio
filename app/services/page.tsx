@@ -197,10 +197,11 @@ export default function Services() {
                             <Select value={formData.budget} onValueChange={val => setFormData({ ...formData, budget: val })}>
                               <SelectTrigger><SelectValue placeholder="Select Budget Range" /></SelectTrigger>
                               <SelectContent>
-                                <SelectItem value="under_10k">Under $10,000</SelectItem>
-                                <SelectItem value="10k_50k">$10,000 - $50,000</SelectItem>
-                                <SelectItem value="50k_100k">$50,000 - $100,000</SelectItem>
-                                <SelectItem value="over_100k">Over $100,000</SelectItem>
+                                <SelectItem value="under_500">Under $500 USD</SelectItem>
+                                <SelectItem value="500_2000">$500 - $2,000 USD</SelectItem>
+                                <SelectItem value="2000_5000">$2,000 - $5,000 USD</SelectItem>
+                                <SelectItem value="5000_10000">$5,000 - $10,000 USD</SelectItem>
+                                <SelectItem value="over_10000">Over $10,000 USD</SelectItem>
                               </SelectContent>
                             </Select>
                           </div>

@@ -7,8 +7,8 @@ import { Button } from '@/components/ui/button'
 import { ArrowRight, Play, CheckCircle2 } from 'lucide-react'
 
 const stats = [
-  { value: 100, suffix: '+', label: 'Projects Delivered' },
-  { value: 50, suffix: '+', label: 'Enterprise Clients' },
+  { value: 60, suffix: '+', label: 'Projects Delivered' },
+  { value: 30, suffix: '+', label: 'Enterprise Clients' },
   { value: 10, suffix: '+', label: 'Industries Served' },
   { value: 95, suffix: '%', label: 'Client Retention' },
 ]

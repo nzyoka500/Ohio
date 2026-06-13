@@ -16,18 +16,16 @@ const values = [
 ]
 
 const timeline = [
-  { year: '2018', title: 'Foundation', text: 'Founded in Columbus, Ohio, focusing on regional mid-market business consulting and corporate strategy.' },
-  { year: '2020', title: 'Technology Pivot', text: 'Expanded capabilities to custom software development and cloud migration, doubling our staff size.' },
-  { year: '2022', title: 'National Expansion', text: 'Established our Sheridan, Wyoming headquarters to coordinate national engagements and larger enterprise systems.' },
-  { year: '2024', title: 'Enterprise Digital Suites', text: 'Launched specialized AI solutions, real-time analytics engines, and intensive digital workshop training.' },
-  { year: '2026', title: 'Present State', text: 'Advising over 50+ continuous contract clients and completing 100+ production projects globally.' },
+  { year: '2024', title: 'Foundation', text: 'Founded in Columbus, Ohio, focusing on corporate strategy combined with custom web software development.' },
+  { year: '2025', title: 'Regional Expansion & AI Pivot', text: 'Established our Sheridan, Wyoming presence to coordinate national cloud solutions and custom Rax AI integrations.' },
+  { year: '2026', title: 'Present State', text: 'Advising over 30+ continuous contract clients and completing 60+ production projects globally.' },
 ]
 
 const stats = [
-  { number: '100+', label: 'Projects Delivered', icon: Target },
-  { number: '50+', label: 'Active Clients', icon: Users },
-  { number: '8+', label: 'Years of Excellence', icon: TrendingUp },
-  { number: '12', label: 'Countries Served', icon: Globe },
+  { number: '60+', label: 'Projects Delivered', icon: Target },
+  { number: '30+', label: 'Active Clients', icon: Users },
+  { number: '2+', label: 'Years of Excellence', icon: TrendingUp },
+  { number: '5', label: 'States Served', icon: Globe },
 ]
 
 export default function About() {
@@ -122,7 +120,7 @@ export default function About() {
                       <Award className="h-7 w-7" />
                     </div>
                     <div>
-                      <span className="text-2xl font-extrabold text-foreground block leading-none">8+</span>
+                      <span className="text-2xl font-extrabold text-foreground block leading-none">2+</span>
                       <span className="text-xs text-muted-foreground mt-0.5 block">Years of Excellence</span>
                     </div>
                   </div>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
+import { Chatbot } from '@/components/chatbot'
 import './globals.css'
 
 const geistSans = Geist({
@@ -43,9 +44,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Chatbot />
         </ThemeProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
   )
 }
+
