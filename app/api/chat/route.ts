@@ -18,12 +18,17 @@ export async function POST(request: Request) {
     // Fetch relevant website context dynamically based on key terms in the query
     const dynamicContext = findRelevantContext(lastUserMessage)
     
+    const asksAboutAI = /powering|powered|what ai|who powers|what engine|what model|which model|rax/i.test(lastUserMessage)
+    const servicesList = asksAboutAI
+      ? 'Strategic Consulting, Custom Software, Cloud Architecture, Rax AI agent integration'
+      : 'Strategic Consulting, Custom Software, Cloud Architecture, AI Solutions'
+
     // Construct a concise system prompt, appending retrieved context only when relevant
     const systemPrompt = {
       role: 'system',
       content: `You are the virtual assistant for Ohio Business & Tech Consultants (Columbus, Ohio).
 Strict rules:
-1. ONLY answer questions directly related to our company, services (Strategic Consulting, Custom Software, Cloud Architecture, Rax AI agent integration), or business/tech consulting in Ohio.
+1. ONLY answer questions directly related to our company, services (${servicesList}), or business/tech consulting in Ohio.
 2. POLITELY decline to answer any questions about unrelated topics (e.g. general trivia, coding, history, other companies, recipes). State that you are only authorized to assist with Ohio Business & Tech Consultants.
 3. Keep responses extremely concise and professional (maximum 2-3 sentences).
 4. Direct client inquiries to our Contact Page (/contact) or contact@ohiobusiness.tech.
@@ -39,8 +44,8 @@ ${dynamicContext}`
       let mockReply = "I apologize, but I am only authorized to answer questions about Ohio Business & Technology Consultants and our technical consulting services."
       
       if (userMessage.includes('service') || userMessage.includes('what do you do') || userMessage.includes('about') || userMessage.includes('work')) {
-        mockReply = "Ohio Consultants offers top-tier Business Consulting, Custom Software Development, Cloud Architecture, and Rax AI agent integrations. What area is your company looking to scale?"
-      } else if (userMessage.includes('rax') || userMessage.includes('api') || userMessage.includes('agentic')) {
+        mockReply = `Ohio Consultants offers top-tier Business Consulting, Custom Software Development, Cloud Architecture, and ${asksAboutAI ? 'Rax AI integrations' : 'AI Solutions'}. What area is your company looking to scale?`
+      } else if (userMessage.includes('rax') || (userMessage.includes('powering') && userMessage.includes('ai')) || userMessage.includes('engine')) {
         mockReply = "We integrate Rax AI to construct smart agentic workflows, custom chatbots, and automated CLI tools with sub-50ms latency. Would you like to consult with an expert on this?"
       } else if (userMessage.includes('project') || userMessage.includes('start') || userMessage.includes('pricing') || userMessage.includes('hire') || userMessage.includes('contact')) {
         mockReply = "We'd love to help you build your system! You can start by filling out our Contact Form at /contact or by emailing us at contact@ohiobusiness.tech."

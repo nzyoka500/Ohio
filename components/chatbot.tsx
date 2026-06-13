@@ -27,7 +27,6 @@ export function Chatbot() {
       sender: 'ai',
       text: "Hello! 👋 Welcome to Ohio Business & Technology Consultants. I am your virtual assistant. How can I help you transform your business today?",
       timestamp: new Date(),
-      latency: '22ms',
     },
   ])
   const [inputValue, setInputValue] = React.useState('')
@@ -158,7 +157,7 @@ export function Chatbot() {
               </button>
             </div>
             <p className="text-xs text-foreground font-medium leading-relaxed mt-1">
-              Need help? Ask me about our services or how to start a project! Typically responds in under 50ms.
+              Need help? Ask me about our services or how to start a project!
             </p>
             <button
               onClick={handleOpenChat}
@@ -198,7 +197,7 @@ export function Chatbot() {
                   </h3>
                   <span className="text-[10px] text-indigo-100 font-medium tracking-wide flex items-center gap-1 mt-1">
                     <span className="inline-block w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-                    Powered by AI Assistant (sub-50ms API)
+                    Powered by AI Assistant
                   </span>
                 </div>
               </div>
@@ -238,13 +237,6 @@ export function Chatbot() {
                       >
                         {message.text}
                       </div>
-
-                      {/* AI Latency Details */}
-                      {isAI && message.latency && (
-                        <span className="text-[10px] text-muted-foreground/80 font-semibold flex items-center gap-1 pl-1">
-                          ⚡ Latency: {message.latency}
-                        </span>
-                      )}
                     </div>
 
                     {!isAI && (
@@ -310,7 +302,7 @@ export function Chatbot() {
             
             {/* Footer Tag */}
             <div className="bg-muted/30 border-t border-border/20 px-4 py-1.5 text-center text-[9.5px] text-muted-foreground/75 font-medium select-none">
-              Typically responds instantly (sub-50ms)
+              Ohio Business & Technology Consultants
             </div>
           </motion.div>
         )}
