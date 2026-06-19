@@ -38,7 +38,7 @@ export const KNOWLEDGE_BASE: KBArticle[] = [
   {
     id: 'contact_details',
     keywords: ['contact', 'phone', 'email', 'address', 'location', 'office', 'headquarters', 'wyoming', 'columbus', 'hours', 'hire', 'quote', 'pricing', 'budget', 'reach'],
-    content: 'Contact Details:\n- Phone: +1 614-401-9311\n- Email: info@ohiobtech.com or contact@ohiobusiness.tech\n- HQ Address: 1309 Coffeen Ave Ste 1200, Sheridan, WY 82801\n- Regional Office: Columbus, Ohio\n- Business Hours: Monday - Friday, 8:00 AM - 6:00 PM EST (Closed Sat/Sun)\n- Custom Quotes: Budget ranges start from under $500, $500-$2,000, $2,000-$5,000, $5,000-$10,000, and over $10,000 USD.'
+    content: 'Contact Details:\n- Phone: +1 614-401-9311\n- HQ Address: 1309 Coffeen Ave Ste 1200, Sheridan, WY 82801\n- Regional Office: Columbus, Ohio\n- Business Hours: Monday - Friday, 8:00 AM - 6:00 PM EST (Closed Sat/Sun)\n- Custom Quotes: Budget ranges start from under $250, $250-$500, $500-$1,000, $1,000-$2,000, $2,000-$3,000, $3,000-$5,000, and $5,000+ USD.'
   }
 ]
 

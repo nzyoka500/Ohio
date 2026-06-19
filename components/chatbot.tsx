@@ -116,7 +116,7 @@ export function Chatbot() {
         {
           id: Date.now().toString(),
           sender: 'ai',
-          text: "I apologize, but I'm having trouble connecting to the network. Please email us at contact@ohiobusiness.tech or check out our /contact page.",
+          text: "I apologize, but I'm having trouble connecting to the network. Please try again later.",
           timestamp: new Date(),
           latency: '2ms',
         },

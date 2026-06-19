@@ -90,7 +90,6 @@ export default function Services() {
       <main className="flex-grow">
         {/* Premium Hero Banner */}
         <section className="relative bg-slate-900 py-28 md:py-36 text-white border-b border-slate-800 overflow-hidden">
-          <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
           
           <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-3xl mx-auto text-center space-y-6">
             <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 border border-primary/20 px-4 py-1.5 rounded-full">
@@ -143,7 +142,7 @@ export default function Services() {
                 </div>
 
                 <Card className="mt-8 border border-border/60 bg-muted/20 overflow-hidden">
-                  <div className="h-1.5 bg-gradient-to-r from-primary via-blue-royal to-primary" />
+                  <div className="h-1.5 bg-primary" />
                   <CardHeader>
                     <CardTitle className="text-base font-bold">Custom Consulting Plan?</CardTitle>
                     <CardDescription className="text-xs">Need an integrated approach combining multiple technology and consulting packages?</CardDescription>
@@ -197,11 +196,13 @@ export default function Services() {
                             <Select value={formData.budget} onValueChange={val => setFormData({ ...formData, budget: val })}>
                               <SelectTrigger><SelectValue placeholder="Select Budget Range" /></SelectTrigger>
                               <SelectContent>
-                                <SelectItem value="under_500">Under $500 USD</SelectItem>
-                                <SelectItem value="500_2000">$500 - $2,000 USD</SelectItem>
-                                <SelectItem value="2000_5000">$2,000 - $5,000 USD</SelectItem>
-                                <SelectItem value="5000_10000">$5,000 - $10,000 USD</SelectItem>
-                                <SelectItem value="over_10000">Over $10,000 USD</SelectItem>
+                                <SelectItem value="under_250">Under $250 USD</SelectItem>
+                                <SelectItem value="250_500">$250 - $500 USD</SelectItem>
+                                <SelectItem value="500_1000">$500 - $1,000 USD</SelectItem>
+                                <SelectItem value="1000_2000">$1,000 - $2,000 USD</SelectItem>
+                                <SelectItem value="2000_3000">$2,000 - $3,000 USD</SelectItem>
+                                <SelectItem value="3000_5000">$3,000 - $5,000 USD</SelectItem>
+                                <SelectItem value="over_5000">$5,000+ USD</SelectItem>
                               </SelectContent>
                             </Select>
                           </div>

@@ -31,7 +31,8 @@ Strict rules:
 1. ONLY answer questions directly related to our company, services (${servicesList}), or business/tech consulting in Ohio.
 2. POLITELY decline to answer any questions about unrelated topics (e.g. general trivia, coding, history, other companies, recipes). State that you are only authorized to assist with Ohio Business & Tech Consultants.
 3. Keep responses extremely concise and professional (maximum 2-3 sentences).
-4. Direct client inquiries to our Contact Page (/contact) or contact@ohiobusiness.tech.
+4. Direct client inquiries generally to our team or contact channels, but do NOT provide specific links, page routes (such as /contact, /services), or email addresses (such as contact@ohiobusiness.tech).
+5. Under no circumstances should you output website URLs, domain names, page routes, or email addresses in your responses. Let it be a plain text answer.
 ${dynamicContext}`
     }
     
@@ -48,12 +49,12 @@ ${dynamicContext}`
       } else if (userMessage.includes('rax') || (userMessage.includes('powering') && userMessage.includes('ai')) || userMessage.includes('engine')) {
         mockReply = "We integrate Rax AI to construct smart agentic workflows, custom chatbots, and automated CLI tools with sub-50ms latency. Would you like to consult with an expert on this?"
       } else if (userMessage.includes('project') || userMessage.includes('start') || userMessage.includes('pricing') || userMessage.includes('hire') || userMessage.includes('contact')) {
-        mockReply = "We'd love to help you build your system! You can start by filling out our Contact Form at /contact or by emailing us at contact@ohiobusiness.tech."
+        mockReply = "We'd love to help you build your system! Feel free to reach out to our team."
       } else if (userMessage.includes('consultant') || userMessage.includes('speak') || userMessage.includes('call') || userMessage.includes('phone') || userMessage.includes('email')) {
-        mockReply = "You can reach our consultants at contact@ohiobusiness.tech or visit our office in Columbus, Ohio. Would you like me to guide you to the Contact page?"
+        mockReply = "You can reach our consultants or visit our office in Columbus, Ohio. Let us know if you'd like to get in touch."
       } else if (dynamicContext) {
         // Use the matching context from the KB directly to mock intelligent responses
-        mockReply = `Based on our website: ${dynamicContext.replace('\n[Retrieved Website Context for Current Query]:\n', '').split('\n')[0]} For full details, please contact us at info@ohiobtech.com.`
+        mockReply = `Based on our website: ${dynamicContext.replace('\n[Retrieved Website Context for Current Query]:\n', '').split('\n')[0]} Please contact us for full details.`
       }
       
       const mockLatency = `${Math.floor(Math.random() * (42 - 22 + 1)) + 22}ms`
