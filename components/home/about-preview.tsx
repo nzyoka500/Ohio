@@ -57,7 +57,7 @@ export function AboutPreview() {
               className="absolute bottom-16 left-4 bg-primary text-white p-5 rounded-2xl shadow-xl flex flex-col items-center text-center z-30 border border-white/10"
             >
               <Award className="h-6 w-6 mb-1" />
-              <span className="text-3xl font-extrabold tracking-tight leading-none">8+</span>
+              <span className="text-3xl font-extrabold tracking-tight leading-none">2</span>
               <span className="text-[10px] font-bold uppercase tracking-wider mt-1">Years of Excellence</span>
             </motion.div>
           </motion.div>
